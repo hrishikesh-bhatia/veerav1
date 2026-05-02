@@ -12,7 +12,10 @@ import metadataRoute from "./API/routes/metadata.route.js";
 
 
 
-const app = express(); // <-- you forgot this line
+const app = express();
+app.get("/", (req, res) => {
+  res.status(200).send("🚀 Vera Bot is Live and Operational");
+});
 
 // Middleware
 app.use(express.json());
